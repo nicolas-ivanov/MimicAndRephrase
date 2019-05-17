@@ -1,7 +1,7 @@
 from typing import Dict, MutableMapping
 
-from elmo.data.fields.field import DataArray, Field
-from elmo.data.vocabulary import Vocabulary
+from src.utils.elmo.data.fields.field import DataArray, Field
+from src.utils.elmo.data.vocabulary import Vocabulary
 
 
 class Instance:

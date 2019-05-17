@@ -44,10 +44,10 @@ method.
 
 from typing import TypeVar, Type, Dict, Union, Any, cast
 import inspect
-from log import info
+from src.utils.log import info
 
-from elmo.common.checks import ConfigurationError
-from elmo.common.params import Params
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.params import Params
 
 T = TypeVar('T')
 

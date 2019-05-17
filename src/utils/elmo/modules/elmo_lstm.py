@@ -11,10 +11,10 @@ with warnings.catch_warnings():
     import h5py
 import numpy
 
-from elmo.modules.lstm_cell_with_projection import LstmCellWithProjection
-from elmo.common.checks import ConfigurationError
-from elmo.modules.encoder_base import _EncoderBase
-from elmo.common.file_utils import cached_path
+from src.utils.elmo.modules.lstm_cell_with_projection import LstmCellWithProjection
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.modules.encoder_base import _EncoderBase
+from src.utils.elmo.common.file_utils import cached_path
 
 
 class ElmoLstm(_EncoderBase):

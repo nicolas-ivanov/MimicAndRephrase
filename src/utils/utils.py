@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from typing import Sequence, List, Optional, Union, cast, TypeVar, Callable
 import math
-from log import info
+from src.utils.log import info
 
 
 LARGE_NEGATIVE = -1e20

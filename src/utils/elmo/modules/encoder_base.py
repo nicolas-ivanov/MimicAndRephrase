@@ -2,7 +2,7 @@ from typing import Tuple, Union, Optional, Callable
 import torch
 from torch.nn.utils.rnn import pack_padded_sequence, PackedSequence
 
-from elmo.nn.util import get_lengths_from_binary_sequence_mask, sort_batch_by_length
+from src.utils.elmo.nn.util import get_lengths_from_binary_sequence_mask, sort_batch_by_length
 
 # We have two types here for the state, because storing the state in something
 # which is Iterable (like a tuple, below), is helpful for internal manipulation

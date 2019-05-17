@@ -5,7 +5,7 @@ import torch
 from torch import Tensor
 from torch.utils.data import Dataset, DataLoader
 
-from utils.word_embedding import Glove
+from src.utils.word_embedding import Glove
 
 import numpy as np
 

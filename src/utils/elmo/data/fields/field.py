@@ -5,7 +5,7 @@ from typing import Dict, Generic, List, TypeVar
 
 import torch
 
-from elmo.data.vocabulary import Vocabulary
+from src.utils.elmo.data.vocabulary import Vocabulary
 
 DataArray = TypeVar("DataArray", torch.Tensor, Dict[str, torch.Tensor])
 

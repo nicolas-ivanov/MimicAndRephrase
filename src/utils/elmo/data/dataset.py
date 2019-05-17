@@ -3,17 +3,17 @@ A :class:`~Batch` represents a collection of ``Instance`` s to be fed
 through a model.
 """
 
-from log import info
+from src.utils.log import info
 from collections import defaultdict
 from typing import Dict, List, Union, Iterator, Iterable
 
 import numpy
 import torch
 
-from elmo.common.checks import ConfigurationError
-from elmo.common.util import ensure_list
-from elmo.data.instance import Instance
-from elmo.data.vocabulary import Vocabulary
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.util import ensure_list
+from src.utils.elmo.data.instance import Instance
+from src.utils.elmo.data.vocabulary import Vocabulary
 
 
 class Batch(Iterable):

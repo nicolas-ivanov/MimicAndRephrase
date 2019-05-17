@@ -3,7 +3,7 @@ from typing import List
 import torch
 from torch.nn import ParameterList, Parameter
 
-from elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.checks import ConfigurationError
 
 class ScalarMix(torch.nn.Module):
     """

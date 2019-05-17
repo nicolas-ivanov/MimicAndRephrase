@@ -2,7 +2,7 @@ import os
 
 from typing import Dict
 
-from log import info
+from src.utils.log import info
 
 
 def _find_models(root_dir, file_name):

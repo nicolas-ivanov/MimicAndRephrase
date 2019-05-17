@@ -4,13 +4,13 @@ Assorted utilities for working with neural networks in AllenNLP.
 # pylint: disable=too-many-lines
 from collections import defaultdict
 from typing import Dict, List, Optional, Any, Tuple
-from log import info, warn, error
 import math
 import warnings
 
 import torch
 
-from elmo.common.checks import ConfigurationError
+from src.utils.log import info, warn, error
+from src.utils.elmo.common.checks import ConfigurationError
 
 
 def batch_tensor_dicts(tensor_dicts: List[Dict[str, torch.Tensor]],

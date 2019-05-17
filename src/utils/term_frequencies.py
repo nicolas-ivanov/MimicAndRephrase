@@ -1,9 +1,10 @@
-from log import info, track
 import csv
 from collections import Counter
 from typing import Mapping, Sequence, List
 import os
-from core_nlp import SimpleSentence
+
+from src.utils.core_nlp import SimpleSentence
+from src.utils.log import info, track
 
 
 class TermFrequencies(Mapping[str, int]):

@@ -11,17 +11,16 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 import numpy as np
 
+from src.attention import LearnedAttention
+from src.data import IDKRephraseDataset, default_data_loader
+from src.utils.token_mapper import RegexTokenMapping, TokenMapping, ExactTokenMapping, TokenMapper, HashTokenMapping
+from src.utils.maskedsequence import MaskedSequence
+from src.utils.gloveembedding import GloveEmbedding
+from src.utils.term_frequencies import TermFrequencies
+from src.utils.elmo import Elmo, batch_to_ids
+from src.utils.word_embedding import Glove
 
-from attention import LearnedAttention
-from data import IDKRephraseDataset, default_data_loader
-from utils.token_mapper import RegexTokenMapping, TokenMapping, ExactTokenMapping, TokenMapper, HashTokenMapping
-from utils.maskedsequence import MaskedSequence
-from utils.gloveembedding import GloveEmbedding
-from utils.term_frequencies import TermFrequencies
-from utils.elmo import Elmo, batch_to_ids
-from utils.word_embedding import Glove
-
-from utils.log import track, info, warn, error, init
+from src.utils.log import track, info, warn, error, init
 
 
 class IDKRephraseModel:
@@ -421,7 +420,7 @@ class IDKRephraseModel:
         return additive
 
     def make_attn_graphic(self, logits: np.array, input_strs: List[str], output_strs: List[str], name: str):
-        from utils.viz import figure_to_image
+        from src.utils.viz import figure_to_image
         import matplotlib.pyplot as plt
         import seaborn as sns
         import pandas as pd

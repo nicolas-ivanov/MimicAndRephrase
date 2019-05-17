@@ -1,0 +1,8 @@
+torch
+matplotlib
+seaborn
+pandas
+nltk
+tensorboardX
+h5py
+fire

@@ -5,7 +5,7 @@ Functions and exceptions for checking that
 AllenNLP and its models are configured correctly.
 """
 
-from log import info
+from src.utils.log import info
 
 from torch import cuda
 

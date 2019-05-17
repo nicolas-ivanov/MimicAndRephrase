@@ -1,12 +1,12 @@
 import pdb
 
-import CoreNLP_pb2
 from typing import Sequence, List, Optional
-from lazy import lazy
 import re
 import bisect
 
-from log import warn
+from src.utils.lazy import lazy
+from src.utils.log import warn
+
 
 
 def _try_begin_chars(tokens, text, prev_end):
@@ -55,12 +55,12 @@ class SimpleToken:
         return f"<Token: {self.original_text}>"
 
     @classmethod
-    def from_proto(cls, proto: CoreNLP_pb2.Token, sentence_index=0, token_index=0) -> 'SimpleToken':
+    def from_proto(cls, proto, sentence_index=0, token_index=0) -> 'SimpleToken':
         return cls(pos=proto.pos, original_text=proto.originalText, lemma=proto.lemma, ner=proto.ner,
                    before=proto.before, after=proto.after, sentence_index=sentence_index, token_index=token_index,
                    begin_char=proto.beginChar)
 
-    def fill_proto(self, proto: CoreNLP_pb2.Token):
+    def fill_proto(self, proto):
         proto.pos = self.pos
         proto.originalText = self.original_text
         proto.lemma = self.lemma
@@ -154,7 +154,7 @@ class SimpleSentence:
         """
         return self.text.__hash__()
 
-    def fill_proto(self, proto: CoreNLP_pb2.Sentence) -> CoreNLP_pb2.Sentence:
+    def fill_proto(self, proto):
         for token in self.tokens:
             token_proto = proto.token.add()
             token.fill_proto(token_proto)
@@ -211,7 +211,7 @@ class SimpleSentence:
         return ans
 
     @classmethod
-    def from_proto(cls, proto: CoreNLP_pb2.Sentence) -> 'SimpleSentence':
+    def from_proto(cls, proto) -> 'SimpleSentence':
         """
         Creates a SimpleSentence given a proto'd CoreNLP Sentence object.
         :param proto: The corresponding proto object. Note that this is a proto object not the raw proto bytes.
@@ -427,7 +427,7 @@ class SimpleDocument:
         self.text = text
         self.sentences = sentences
 
-    def fill_proto(self, proto: CoreNLP_pb2.Document) -> CoreNLP_pb2.Document:
+    def fill_proto(self, proto):
         proto.text = self.text
         for sent in self.sentences:
             sent_proto = proto.sentence.add()
@@ -435,7 +435,7 @@ class SimpleDocument:
         return proto
 
     @classmethod
-    def from_proto(cls, proto: CoreNLP_pb2.Document) -> 'SimpleDocument':
+    def from_proto(cls, proto):
         """
         Creates a SimpleDocument from a proto definition
         """

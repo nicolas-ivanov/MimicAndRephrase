@@ -4,15 +4,15 @@ out-of-vocabulary token.
 """
 
 import codecs
-from log import info, error, warn
 import os
 from collections import defaultdict
 from typing import Any, Callable, Dict, Iterable, List, Optional, Set, Union
 
-from elmo.common.util import namespace_match
-from elmo.common import Params, Registrable
-from elmo.common.checks import ConfigurationError
-from elmo.data import instance as adi  # pylint: disable=unused-import
+from src.utils.log import info, error, warn
+from src.utils.elmo.common.util import namespace_match
+from src.utils.elmo.common import Params, Registrable
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.data import instance as adi  # pylint: disable=unused-import
 
 
 DEFAULT_NON_PADDED_NAMESPACES = ("*tags", "*labels")

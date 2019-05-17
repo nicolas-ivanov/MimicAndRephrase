@@ -6,8 +6,8 @@ import torch.nn as nn
 from torch.nn.utils.rnn import PackedSequence, pack_padded_sequence, pad_packed_sequence
 from torch.nn import functional as F
 
-import functions as mytorch
-from utils import get_device
+import src.utils.functions as mytorch
+from src.utils.utils import get_device
 
 class MaskedSequence:
     """

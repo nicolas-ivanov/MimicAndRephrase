@@ -7,8 +7,8 @@ from typing import Optional, Tuple, List
 
 import torch
 
-from elmo.nn.util import get_dropout_mask
-from elmo.nn.initializers import block_orthogonal
+from src.utils.elmo.nn.util import get_dropout_mask
+from src.utils.elmo.nn.initializers import block_orthogonal
 
 
 class LstmCellWithProjection(torch.nn.Module):

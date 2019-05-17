@@ -1,10 +1,10 @@
 from typing import Dict, List
 
-from elmo.common.checks import ConfigurationError
-from elmo.common.util import pad_sequence_to_length
-from elmo.data.tokenizers.token import Token
-from elmo.data.token_indexers.token_indexer import TokenIndexer
-from elmo.data.vocabulary import Vocabulary
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.util import pad_sequence_to_length
+from src.utils.elmo.data.tokenizers.token import Token
+from src.utils.elmo.data.token_indexers.token_indexer import TokenIndexer
+from src.utils.elmo.data.vocabulary import Vocabulary
 
 
 def _make_bos_eos(

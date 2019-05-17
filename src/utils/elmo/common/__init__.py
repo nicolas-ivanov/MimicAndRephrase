@@ -1,3 +1,3 @@
-from elmo.common.params import Params
-from elmo.common.registrable import Registrable
+from src.utils.elmo.common.params import Params
+from src.utils.elmo.common.registrable import Registrable
 

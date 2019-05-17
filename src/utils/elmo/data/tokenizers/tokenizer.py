@@ -1,7 +1,7 @@
 from typing import List
 
-from elmo.common import Registrable
-from elmo.data.tokenizers.token import Token
+from src.utils.elmo.common import Registrable
+from src.utils.elmo.data.tokenizers.token import Token
 
 
 class Tokenizer(Registrable):

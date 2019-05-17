@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-from word_embedding import Glove
-from log import info
+from src.utils.word_embedding import Glove
+from src.utils.log import info
 
 class GloveEmbedding(nn.Module):
     """

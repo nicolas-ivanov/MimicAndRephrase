@@ -2,13 +2,13 @@ import os
 import struct
 import sys
 import unicodedata
-import props
 from typing import List, Sequence
 
 import numpy as np
 
-from token_mapper import TokenMapper, default_token_mapper
-from log import info, warn, track
+import src.utils.props as props
+from src.utils.token_mapper import TokenMapper, default_token_mapper
+from src.utils.log import info, warn, track
 
 
 class Glove:

@@ -1,5 +1,4 @@
 import json
-from log import info, error, warn
 from typing import Union, List, Dict, Any
 import warnings
 import os
@@ -12,18 +11,19 @@ with warnings.catch_warnings():
     warnings.filterwarnings("ignore", category=FutureWarning)
     import h5py
 
-from elmo.common.file_utils import cached_path
-from elmo.common.checks import ConfigurationError
-from elmo.common import Params
-from elmo.common.util import lazy_groups_of
-from elmo.modules.elmo_lstm import ElmoLstm
-from elmo.modules.highway import Highway
-from elmo.modules.scalar_mix import ScalarMix
-from elmo.nn.util import remove_sentence_boundaries, add_sentence_boundary_token_ids, get_device_of
-from elmo.data.token_indexers.elmo_indexer import ELMoCharacterMapper, ELMoTokenCharactersIndexer
-from elmo.data.dataset import Batch
-from elmo.data import Token, Vocabulary, Instance
-from elmo.data.fields import TextField
+from src.utils.log import info, error, warn
+from src.utils.elmo.common.file_utils import cached_path
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common import Params
+from src.utils.elmo.common.util import lazy_groups_of
+from src.utils.elmo.modules.elmo_lstm import ElmoLstm
+from src.utils.elmo.modules.highway import Highway
+from src.utils.elmo.modules.scalar_mix import ScalarMix
+from src.utils.elmo.nn.util import remove_sentence_boundaries, add_sentence_boundary_token_ids, get_device_of
+from src.utils.elmo.data.token_indexers.elmo_indexer import ELMoCharacterMapper, ELMoTokenCharactersIndexer
+from src.utils.elmo.data.dataset import Batch
+from src.utils.elmo.data import Token, Vocabulary, Instance
+from src.utils.elmo.data.fields import TextField
 
 
 class Elmo(torch.nn.Module):

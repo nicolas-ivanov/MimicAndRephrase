@@ -8,12 +8,12 @@ from typing import Any, Dict, List
 from collections import MutableMapping, OrderedDict
 import copy
 import json
-from log import info
+from src.utils.log import info
 import os
 
 
-from elmo.common.checks import ConfigurationError
-from elmo.common.file_utils import cached_path
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.file_utils import cached_path
 
 
 def evaluate_file(filename: str, **_kwargs) -> str:

@@ -21,7 +21,6 @@ The available initialization functions are
 * :func:`"block_orthogonal" <block_orthogonal>`
 * :func:`"uniform_unit_scaling" <uniform_unit_scaling>`
 """
-from log import info, error, warn
 import re
 import math
 from typing import Callable, List, Tuple, Type, Iterable
@@ -30,9 +29,10 @@ import itertools
 import torch
 import torch.nn.init
 
-from elmo.common import Registrable
-from elmo.common.params import Params
-from elmo.common.checks import ConfigurationError
+from src.utils.log import info, error, warn
+from src.utils.elmo.common import Registrable
+from src.utils.elmo.common.params import Params
+from src.utils.elmo.common.checks import ConfigurationError
 
 
 class Initializer(Registrable):

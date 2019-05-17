@@ -9,12 +9,12 @@ import textwrap
 
 import torch
 
-from elmo.common.checks import ConfigurationError
-from elmo.data.fields.sequence_field import SequenceField
-from elmo.data.tokenizers.token import Token
-from elmo.data.token_indexers.token_indexer import TokenIndexer, TokenType
-from elmo.data.vocabulary import Vocabulary
-from elmo.nn import util
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.data.fields.sequence_field import SequenceField
+from src.utils.elmo.data.tokenizers.token import Token
+from src.utils.elmo.data.token_indexers.token_indexer import TokenIndexer, TokenType
+from src.utils.elmo.data.vocabulary import Vocabulary
+from src.utils.elmo.nn import util
 
 TokenList = List[TokenType]
 

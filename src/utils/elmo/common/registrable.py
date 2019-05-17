@@ -7,10 +7,10 @@ for registering them.
 """
 from collections import defaultdict
 from typing import TypeVar, Type, Dict, List
-from log import info
+from src.utils.log import info
 
-from elmo.common.checks import ConfigurationError
-from elmo.common.from_params import FromParams
+from src.utils.elmo.common.checks import ConfigurationError
+from src.utils.elmo.common.from_params import FromParams
 
 
 T = TypeVar('T')

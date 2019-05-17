@@ -1,7 +1,8 @@
 from typing import List, Sequence, Dict
 from abc import ABC, abstractmethod
 import re
-import TensorflowModel_pb2 as proto
+
+import src.utils.TensorflowModel_pb2 as proto
 
 
 def simple_hash(token: str, output_size: int) -> int:

@@ -1,7 +1,7 @@
 """
 Ripped from AllenNLP
 """
-from elmo.data.fields.field import DataArray, Field
+from src.utils.elmo.data.fields.field import DataArray, Field
 
 
 class SequenceField(Field[DataArray]):
